@@ -2,13 +2,8 @@
 A beginner-friendly JavaScript learning journey with Base to Core concepts, each explained with a mini project. Every folder covers one concept with simple code, clear explanation, and hands-on practice. Perfect for self-learners, students, and anyone who wants to understand by doing.
 
 ## **🔰 Basics**
-<<<<<<< HEAD
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/1_Variables/">Variables (var, let, const)</a>
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/2_Data_Types/">Data Types (String, Number, Boolean, Null, Undefined, Object, Array)</a>
-=======
-* Variables (var, let, const) [https://patelurvish0706.github.io/JourneyToJS/1_Basics/1_Variables/]
-* Data Types (String, Number, Boolean, Null, Undefined, Object, Array)
->>>>>>> d0995a7f7445d1503261c55a05732038ffe364bb
 * Operators (Arithmetic, Logical, Comparison)
 * Conditional Statements (if, else, switch)
 * Loops (for, while, forEach)
