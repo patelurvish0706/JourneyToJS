@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../rsc/icon.avif">
+    <title>Variable Basics</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../../rsc/style.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <h2 style="display: flex;align-items: center;gap: 10px;">
+            <img src="../../rsc/icon.avif" alt="My Icon" style="border-radius: 8px;" width=60" height="60">
+            Variables In JavaScript
+        </h2>
+        <label><a href="https://github.com/patelurvish0706/JourneyToJS">JurneyToJs</a> by Urvish Patel</label>
+
+    </div>
+
+    <P>
+        ● &nbsp; There is <b>No need to mensioned Datatype</b> on variable declaration, JS auto detect it.
+        <br>
+        ● &nbsp; The thing we have to <b>focus on is the keyword</b> to define variable. <br>
+        ● &nbsp; There are Three Keywords used to define Variable. <br>
+        <b> &nbsp;&nbsp; &nbsp; Var, Let, Const</b> <br> <br>
+        ● &nbsp; <b>var</b> used for defining <b>Reassignable</b> and <b>Redeclare</b> variable. <br>
+        ● &nbsp; <b>Let</b> used for <b>Reassignable</b> variable but <b>Not allow to Redeclare</b>. <br>
+        ● &nbsp; <b>Const</b> used for <b>constant variable</b> also <b>Not allow to Redeclare.</b> <br>
+    </P>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <p>Let's Declare and Assign Variable.</p>
+
+    <pre><code>
+        var name = "Urvish";
+        let age = 20;
+        const country = "India";
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <p>Here is example of Let, Var and Const.</p>
+
+    <h4>◈ Var</h4>
+    <pre><code>
+        // var => Reassignable✅, Redeclare✅, Undefined✅
+
+        var name ; // Declaration 
+        console.log("After Declaration: "+name);
+
+        name = "Urvish"; // Assigning value
+        console.log("After Assigning value: "+name);
+
+        name = "IronMan"; // Reassign value
+        console.log("After Reassign value: "+name);
+
+        var name = "Deadpool"; // Re-Declaration
+        console.log("After Redeclaration: "+name);
+
+    </code></pre>
+    Output in Console,
+    <pre><code>
+        // Check Console by F12 or Right Click and check Inspect and then Console
+
+        After Declaration:        // Empty on first load, and take latest value on reload : Deadpool
+        After Assigning value: Urvish 
+        After Reassign value: IronMan
+        After Redeclaration: Deadpool
+    </code></pre>
+
+    Assigned <b>Value is Changed</b>. This is not so good Approch to define variable.
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Let</h4>
+    <pre><code>
+        // Let => Reassignable✅, Redeclare❌, Undefined✅
+
+        let age ; // Declaration 
+        console.log("After Declaration: "+age);
+
+        age = 20; // Assigning value
+        console.log("After Assigning value: "+age);
+
+        age = 25; // Reassign value
+        console.log("After Reassign value: "+age);
+
+        let age = 27; // Redeclaration
+        console.log("After Redeclaration: "+age);
+    </code></pre>
+
+    Output in Console,
+    <pre><code>
+        // Check Console by F12 or Right Click and check Inspect and then Console
+        
+        After Declaration: undefined // No value assigned
+        After Assigning value: 20
+        After Reassign: 25
+        
+        /* Error while Redeclaration of existing variable */
+        ⊗ Uncaught SyntaxError: Identifier 'age' has already been declared
+
+    </code></pre>
+
+    Assigned <b>Value is Changed</b>. But can <b>Not Redeclared</b>. Best Approch to define variable.
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Const</h4>
+    <pre><code>
+        // Const => Reassignable❌, Redeclare❌, Undefined❌
+
+        const city ; // Can't declare without assigning value
+
+        const country = "India"; // Declaration + Assigning value
+        console.log("After Assigning value: "+country);
+
+        country = "America"; // Reassign value
+        console.log("After Reassign value: "+country);
+
+        const country = "Canada"; // Redeclaration
+        console.log("After Redeclaration: "+country);
+    </code></pre>
+
+    Output in Console,
+    <pre><code>
+        // Check Console by F12 or Right Click and check Inspect and then Console
+
+        /* Const can not be undefined */
+        ⊗ Uncaught SyntaxError: Missing initializer in const declaration
+        
+        After Assigning value: India
+
+        /* Error while Reassigning and Redeclaration of existing variable */
+        ⊗ Uncaught TypeError: Assignment to constant variable.
+        ⊗ Uncaught SyntaxError: Identifier 'age' has already been declared
+
+    </code></pre>
+
+    Assigned <b>Value is Not Changed</b>. Also <b>Not Redeclarable</b>. Good Approch to define Constant variable.
+
+    <!------------------------------------------------->
+    <hr>
+
+    <P>In JS, We can <b>Assign almost anything</b>.</P>
+
+    <h4>◈ Primitive Values</h4>
+    <pre><code>
+        let num = 42;              // number
+        let str = "Hello";         // string
+        let bool = true;           // boolean
+        let nothing = null;        // null
+        let undef = undefined;     // undefined
+        let big = 12345678901234567890n; // BigInt
+        let unique = Symbol("id"); // Symbol
+    </code></pre>
+
+    <h4>◈ Objects and Complex Types</h4>
+    <pre><code>
+        let obj = { name: "Alice", age: 30 };   // Object
+        let arr = [1, 2, 3];                    // Array
+        let func = function() { return "Hi"; }; // Function
+        let arrow = () => "Hello";             // Arrow Function
+        let date = new Date();                 // Date object
+        let regex = /abc/i;                    // RegExp
+    </code></pre>
+
+    <h4>◈ Results of Expressions</h4>
+    <pre><code>
+        let sum = 5 + 3; // Store 7
+        let result = anotherVar || "default"; // if anotherVar not true or available consider default
+    </code></pre>
+
+    <h4>◈ Values from Other Variables or Functions</h4>
+    <pre><code>
+        let x = y; // Assign value of Y to X
+        let output = calculateResult();
+    </code></pre>
+
+    <h4>◈ Dynamic Typing</h4>
+    <p>JavaScript Var and Let Keyword Allow to <b>Assign any type of value to existing variable</b>.</p>
+    <pre><code>
+        let x = 5;
+        x = "Now I’m a string";  // totally allowed
+        x = true;  // Now its Boolean
+        x = null;  // its not empty, Assigned as Null
+        x = undefined;  // Now its Empty, nothing stored
+    </code></pre>
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Scope of Variables</h4>
+    <p>
+        There is <b>Predefined scopes for accessing variable</b> Its kind of Range. <br><br>
+        ● &nbsp;&nbsp;var is function-scoped <br>
+        ● &nbsp;&nbsp;let and const are block-scoped <br><br>
+
+        In simple word, <b>Var allow to access variable anywhere globally except few block of function</b>. <br>
+        and <b>Let and Const are secured which only accesible in block of code</b> .
+    </p>
+
+    <pre><code>
+        {
+            var a = 10;
+            let b = 20;
+        }
+
+        console.log("accessing var a : " + a); // 10
+        console.log("accessing let b : " + b); // ❌ Error
+    </code></pre>
+
+    Output in Console,
+    <pre><code>
+        // Check Console by F12 or Right Click and check Inspect and then Console
+
+        /* Var allow to access defined variable globally. */
+           accessing var a : 10
+        ⊗ Uncaught ReferenceError: b is not defined
+
+        /* Error while accessing let, its not allow to access outside of block */
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Hoisting of Variables</h4>
+    <p>
+        Hoisting is JavaScript's behavior of moving declarations to the top of the current scope. <br><br>
+        In simple word, <br> JavaScript <b>registers variable and function declarations during the compilation phase.</b> <br>
+        <b>It assigned values during the execution phase</b> (not at compile time). <br>
+
+    <pre><code>
+             var name ; // only Declared -> Register as name to assign value latter
+             let age ; // only Declared -> Register as age to assign value latter
+             var country ; // only Declared -> Register as country to assign value latter
+         </code></pre>
+
+    When we <b>calls functions or variables first in execution before Assigning values to it</b>.<br>
+    <b>It allow to access it</b>. This whole senario called hoisting.
+
+    <pre><code>
+            /* Calling variable and Function before declaring it. 
+            but it already Registered in memory without value in compilation phase. */
+
+            console.log("petName: " + petName); // calling var petName;
+            sayHello(); // calling sayhello() function
+
+            var petName = "Vodaphone" ;
+            function sayHello(){
+                console.log("hehe, Hello!!");
+            }
+        </code></pre>
+
+        Output in Console,
+        <pre><code>
+            petName: undefined     // console.log(petName); no value assigned in compilation phase
+            hehe, Hello!! // sayHello();
+        </code></pre>
+        
+        
+        <p>Variables and functions can be used before they are declared. <br>
+        but it <b>Depends on keyword: var, let, const, or function.</b></p>
+
+        <p>In case of let and const</p>
+        <pre><code> 
+            console.log(whoAmI); // calling let whoAmI;
+            console.log(whoIsShe); // calling const whoAmShe;
+
+            let whoAmI = "Vision";
+            const whoIsShe = "Wonda";
+        </code></pre>
+
+        Output in console,
+        <pre><code>
+            ⊗ Uncaught ReferenceError: Cannot access 'whoAmI' before initialization
+            ⊗ Uncaught ReferenceError: Cannot access 'whoIsShe' before initialization
+        </code></pre>
+
+        <p>Bad luck, Its gonna be happen because <b>Let and const are secure to use</b>. <br>
+        Where <b>var can cause hoisting confusion, leads to hard for debugging</b> and finding error.</p> <br><br>
+
+        &copy; JurneyToJs by Urvish Patel.
+
+
+    </body>
+<script src="script.js"></script>
+
+</html>
