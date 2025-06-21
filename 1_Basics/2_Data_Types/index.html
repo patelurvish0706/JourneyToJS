@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../rsc/icon.avif">
+    <title>DataTypes Basics</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../../rsc/style.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <h2 style="display: flex;align-items: center;gap: 10px;">
+            <img src="../../rsc/icon.avif" alt="My Icon" style="border-radius: 8px;" width=60" height="60">
+            DataTypes In JavaScript
+        </h2>
+        <label><a href="https://github.com/patelurvish0706/JourneyToJS">JurneyToJs</a> by Urvish Patel</label>
+
+    </div>
+
+    <P>
+        ● &nbsp; There is <b>No need to mensioned Datatype</b> on variable declaration, JS auto detect it.<br>
+        ● &nbsp; It is important to understand types of Datatapes and its values.<br><br>
+        &nbsp;&nbsp; Primitive DataType <br>
+        &nbsp;&nbsp; Non Primitive DataType
+    </P>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Primitive Data Types</h4>
+
+    <h4>Number</h4>
+    <p>Used for integers and decimals.</p>
+    <pre><code>
+        let age = 25;
+        let price = 99.99;
+        let score = NaN;      // Not a Number (still type "number")
+        let inf = Infinity;   // Represents infinite number
+    </code></pre>
+
+    <pre><code>
+        const pi = 22/7 ;
+        let radius = prompt("Enter radius of Circle in cm."); // Take Input by Prompt Box
+        let areaOfCircle = pi * (radius * radius);   // Store Formulas
+        console.log( areaOfCircle + ' cm');
+    </code><button id="runCode" title="Run Code" onclick=" let radius = prompt('Enter radius of Circle in cm.'); console.log( (22/7) * (radius * radius) + ' cm');">▶</button></pre>
+
+    Output in console,
+    <pre><code>
+        // Check Console by F12 or Right Click and check Inspect and then Console
+
+        00.000 cm // follows this formate for output OR
+        NaN       // If input is not the number
+    </code></pre>
+
+    <h4>String</h4>
+    <p>Text is written using 'single', "double", or `backticks`.</p>
+    <pre><code>
+        let name = "Alice";
+        let greeting = 'Hello!';
+        let template = `Hi, ${name}`; // Template string using backticks
+        console.log(template);
+    </code></pre>
+
+    Output in console,
+    <pre><code>
+        Hi, Alice
+    </code></pre>
+
+    <h4>Boolean</h4>
+    <p>
+        Only two values: true or false <br><br>
+        <b>true</b> contain <b>1</b>,<br>
+        <b>false</b> contain <b>0</b>.
+    </p>
+
+    <pre><code>
+        let isLoggedIn = true;
+        let hasPermission = false;
+
+        console.log(isLoggedIn);    // true
+        console.log(hasPermission); // false
+
+        console.log(isLoggedIn + isLoggedIn);        // 1 + 1 = 2
+        console.log(isLoggedIn + hasPermission);     // 1 + 0 = 1
+        console.log(hasPermission + hasPermission);  // 0 + 0 = 0
+    </code></pre>
+
+    In console,
+    <pre><code>
+        true
+        false
+        2
+        1
+        0
+    </code></pre>
+
+    <h4>Undefined</h4>
+    <p>Means a <b>variable is declared but not yet assigned</b> a value.</p>
+    <pre><code>
+        let Yellowfruit;
+        Yellowfruit = "Banana"
+        console.log(Yellowfruit); // Banana is defined
+
+        let Redfruit ;
+        // Redfruit = "Apple"   // Commented | Apple not gonna assign
+        console.log(Redfruit); // undefined
+
+        let Greenfruit ;
+        console.log(Greenfruit); // undefined
+    </code></pre>
+
+    In console,
+    <pre><code>
+        Banana     // Banana is assigned
+        undefined  // Apple is commented
+        undefined  // only Declared
+    </code></pre>
+
+    <h4>Null</h4>
+    <p>Means intentionally empty or “no value”.</p>
+
+    <p>In <b>undefined there is no actuall value to assign</b>. <br>
+        but <b>null is</b> different, It <b>actuall value which say its NULL</b>.</p>
+
+    <pre><code>
+        let person = null;
+    </code></pre>
+
+    <h4>BigInt</h4>
+    <p>Used for very large numbers beyond normal Number limits.</p>
+    <pre><code>
+        let big = 123456789012345678901234567890n;
+    </code></pre>
+
+    <h4>Symbol</h4>
+    <p>A Symbol is a primitive data type introduced in ES6 (ECMAScript 2015). <br><br>
+        It represents a <b>unique and immutable value</b>. <br>
+        Symbols are mostly used to <b> create unique keys for object properties</b> — without the risk of name
+        collision.</p>
+
+    <pre><code>
+        const userId = Symbol('userId'); // Create Symbol
+
+        let user = {
+          name: "Alice",
+          [userId]: 101 
+        };
+
+        console.log(user[userId]); // 101
+    </code></pre>
+
+    <pre><code>
+        101
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Non-Primitive (Reference) Data Types</h4>
+    <p>Not Primitives are more complex and can store multiple values.</p>
+
+    <h4>Object</h4>
+    <p>Collection of Key Value pair.</p>
+
+    <pre><code>
+        // Object Student
+        let Student = {
+            name: "John",
+            marks: 30,
+            course: "IT"
+        };
+
+        console.log(Student.name); // "John"
+        console.log(Student["marks"]); // 30
+
+        // Access all properties at once
+        for (let key in Student) {
+          console.log(`${key}: ${Student[key]}`);
+        }
+    </code></pre>
+
+    <pre><code>
+        john  // Accessing by Dot Notation
+        30    // Accessing by Braces Notation
+
+        name: John
+        marks: 30
+        couse: IT
+    </code></pre>
+
+    <h4>Arrays</h4>
+    <p>An ordered list of values (like a list or group).</p>
+
+    <pre><code>
+        // Array of fruits
+        let fruits = ["apple", "banana", "mango"];
+
+        console.log(fruits[0]); // "apple"
+        console.log(fruits[2]); // "mango"
+
+        // Access all values at once
+        for (let fruit in fruits) {
+          console.log(fruits[fruit]);
+        }
+    </code></pre>
+    <pre><code>
+        apple
+        mango
+
+        // Access all together
+        apple
+        banana
+        mango
+    </code></pre>
+
+    <h4>Function</h4>
+    <p>A block of code you can reuse. It's also a special kind of object. Can use for perform task as required.</p>
+    <pre><code>
+        function greet() {
+          console.log("Hello!");
+        }
+
+        greet();
+    </code></pre>
+
+    <pre><code>
+        hello!
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Type Checking</h4>
+    <p>Used to check the data type of any value.</p>
+
+    <pre><code>
+        console.log(typeof 42);       // "number"
+        console.log(typeof "hello");  // "string"
+        console.log(typeof null);     // "object" (weird, but historical bug)
+    </code></pre>
+
+    <pre><code>
+        let numeric = 10 ;
+        let stringy = "heyy buddy";
+        let bulean = true;
+        let nodata ;
+        let novalue = Null;
+
+        console.log("numeric is " + typeof (numeric));
+        console.log("stringy is " + typeof (stringy));
+        console.log("bulean is " + typeof (bulean));
+        console.log("nodata is " + typeof (nodata));
+        console.log("novalue is " + typeof (novalue));
+
+        alert("numeric is " + typeof (numeric) + "\n" +
+              "stringy is " + typeof (stringy) + "\n" +
+              "bulean is " + typeof (bulean) + "\n" +
+              "nodata is " + typeof (nodata) + "\n" +
+              "novalue is " + typeof (novalue))
+
+    </code><button id="runCode" title="Run Code" onclick="checkType()">▶</button></pre>
+
+    Output in console,
+    <pre><code>
+        numeric is number
+        stringy is string
+        bulean is boolean
+        nodata is undefined
+        novalue is object
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Type Conversion in JavaScript</h4>
+    <p>There are two types type Conversion exist in javasript. <br> <br>
+        <b>Implicit (Auto Conversion by JS)</b><br>
+        <b>Explicit (Manually Convert)</b>
+    </p>
+
+    <h4>Implicit</h4>
+    <p>JavaScript automatically converts types in expressions.</p>
+
+    <pre><code>
+        console.log("5" + 2);   // "52"  → number 2 is converted to string
+        console.log("5" - 2);   // 3     → string "5" is converted to number
+        console.log(true + 1);  // 2     → true becomes 1
+    </code></pre>
+
+    <pre><code>
+        52
+        3
+        2
+    </code></pre>
+
+    <h4>Explicit</h4>
+    <p>Use functions: String(), Number(), Boolean()</p>
+
+    <pre><code>
+        String(100);
+        '100'
+
+        Number("42");
+        42
+
+        Boolean(0);
+        false
+
+        parseInt("10px");
+        10
+
+        parseFloat("3.14");
+        3.14
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Equality: == vs ===</h4>
+    <h4>== (Loose Equality)</h4>
+    <p>Compares values, but converts types if needed.</p>
+
+    <pre><code>
+        console.log("5" == 5 );        // true (string is converted to number)
+        console.log(false == 0);       // true
+        console.log(null == undefined);// true
+    </code></pre>
+
+    <pre><code>
+        true
+        true
+        true
+    </code></pre>
+
+    <h4>=== (Strict Equality)</h4>
+    <p>Compares values and types — no conversion.</p>
+
+    <pre><code>
+        console.log("5" === 5);          // false (string vs number)
+        console.log(false === 0);        // false
+        console.log(null === undefined); // false
+    </code></pre>
+
+    <pre><code>
+        false
+        false
+        false
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Mutability</h4>
+    <p><b>Mutable</b> = can be changed <br>
+       <b>Objects and Arrays are mutable</b></p>
+
+    <pre><code>
+        const client = { name: "Alice" };
+        console.log(client.name); // Alice
+
+        client.name = "Bob"; // changed
+        console.log(client.name); // Bob
+    </code></pre>
+
+    <pre><code>
+        Alice
+        Bob
+    </code></pre>
+
+    <p><b>Immutable</b> = cannot be changed <br>
+    <b>Primitive values (string, number, boolean, null, undefined, symbol, bigint)</b></p>
+
+    <pre><code>
+        let str = "hello";
+        console.log(str);   // "hello"
+
+        str[0] = "H";       // does nothing
+        console.log(str);   // "hello"
+    </code></pre>
+
+    <pre><code>
+        hello
+        hello
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Value vs Reference</h4>
+
+    <p><b>Value</b> (Primitive Types) <br>
+    <b>Copied by Value</b></p>
+
+    <pre><code>
+        let a = 10;
+        let b = a;
+        b = 20;
+        console.log(a); // 10
+    </code></pre>
+
+    <pre><code>
+        10
+    </code></pre>
+
+    <p><b>Reference</b> (Objects, Arrays) <br>
+    <b>Copied by reference (both point to same object)</b></p>
+
+    <pre><code>
+        let obj1 = { x: 1 };
+        let obj2 = obj1;
+        obj2.x = 5;
+        console.log(obj1.x); // 5 (also changed)
+    </code></pre>
+
+    <pre><code>
+        5
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    &copy; JurneyToJs by Urvish Patel.
+
+</body>
+<script src="script.js"></script>
+
+</html>
