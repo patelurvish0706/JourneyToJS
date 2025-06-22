@@ -4,7 +4,7 @@ A beginner-friendly JavaScript learning journey with Base to Core concepts, each
 ## **🔰 Basics**
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/1_Variables/">Variables (var, let, const)</a>
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/2_Data_Types/">Data Types (String, Number, Boolean, Null, Undefined, Object, Array)</a>
-* Operators (Arithmetic, Logical, Comparison)
+* <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/3_Operators/">Operators (Arithmetic, Logical, Comparison)</a>
 * Conditional Statements (if, else, switch)
 * Loops (for, while, forEach)
 

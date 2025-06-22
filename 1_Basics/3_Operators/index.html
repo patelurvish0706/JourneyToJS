@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../rsc/icon.avif">
+    <title>Operators Basics</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../../rsc/style.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <h2 style="display: flex;align-items: center;gap: 10px;">
+            <img src="../../rsc/icon.avif" alt="My Icon" style="border-radius: 8px;" width=60" height="60">
+            Operators In JavaScript
+        </h2>
+        <label><a href="https://github.com/patelurvish0706/JourneyToJS">JurneyToJs</a> by Urvish Patel</label>
+
+    </div>
+
+    <P>
+        ● &nbsp; Operators are used to perform operations on values and variables.<br>
+    </P>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <p><b>Before learning about Operators</b>, It’s important to understand how <b>Quotes</b> work in JS.<br><br>
+        We have <b>three types of quotes</b> to write strings: <br><br>
+        <b>• " " (Double quotation)</b> - For String <br>
+        <b>• ' ' (Single quotation)</b> - For String <br>
+        <b>• ` ` (Backticks)</b> - For String and JSX <br>
+
+    <p>Let’s say you want to print this kind of text in console.</p>
+
+    <pre><code>
+        Hello my name is "Urvish" 
+    </code></pre>
+
+    <p>You might try this</p>
+
+    <pre><code>
+        console.log("Hello my name is "Urvish""); // ❌ Uncaught SyntaxError
+    </code></pre>
+
+    <p>❌But <b>it doesn’t work</b> — because the inner double quotes confuse JavaScript. <br>
+        <b>It thinks the string ends early.</b>
+    </p> <br>
+
+    <p><b>✔️We can fix it in two ways:</b></p>
+    <p><b>1. Use backticks or single quotes outside:</b></p>
+
+    We can wrap whole string in to another quotation instead of that one which exist in string.
+
+    <pre><code>
+        console.log(`Hello my name is "Urvish"`); // ✅ Wrap Whole in ` `
+        console.log('Hello my name is "Urvish"'); // ✅ Wrap whole in ' '
+    </code></pre>
+
+    <p><b>2. Use backslash \ to escape double quotes:</b></p>
+
+    Backslash Helps to consider " " as a string in js.
+
+    <pre><code>
+        console.log("Hello my name is \"Urvish\""); // ✅
+    </code></pre>
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Arithmetic Operators</h4>
+    <p>Used to perform mathematical calculations: <br><br>
+        We can <b>Craft & Calculate any kind of formula</b> using this operators.</p>
+
+    <pre><code>
+        let a = 10, b = 3;
+
+        let sum = a + b;
+        console.log("Sum: ", sum);  // 13
+
+        let sub = a - b;
+        console.log("Sub: ", sub);  // 7
+
+        let mul = a * b;
+        console.log("Mul: ", mul);  // 30
+
+        let div = a / b;
+        console.log("Div: ", div );  // 3.333...
+
+        let mod = a % b;
+        console.log("Mod: ", mod);  // 1 (remainder)
+
+        let pwr = a ** b;
+        console.log("Pwr: ", pwr); // 1000 (a to the power b)
+
+        a++; // Increment
+        console.log("Increment: ",a); // 11
+
+        b--; // Decrement
+        console.log("Decrement: ",b); // 2
+    </code></pre>
+
+    <pre><code>
+        Sum:  13
+        Sub:  7
+        Mul:  30
+        Div:  3.3333333333333335
+        Mod:  1
+        Pwr:  1000
+        Increment:  11
+        Decrement:  2
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Assignment Operators</h4>
+    <p>Used to assign and update values: <br><br>
+        This is the simple and short <b>way to assign and update value in itself</b> without using another variable.</p>
+
+    <pre><code>
+        let x = 5;
+        console.log("x is " , x);
+
+        x += 3;
+        console.log( "x += 3 :", x ); // x = x + 3 → 8
+
+        x -= 2;
+        console.log( "x -= 2 :", x ); // x = x - 2 → 6
+
+        x *= 2;
+        console.log( "x *= 2 :", x ); // x = x * 2 → 12
+
+        x /= 4;
+        console.log( "x /= 4 :", x ); // x = x / 4 → 3
+
+        x %= 2;
+        console.log( "x %= 2 :", x ); // x = x % 2 → 1
+        
+        console.log("x is ", x); // 1
+    </code></pre>
+
+    <pre><code>
+        x is  5
+        x += 3 : 8
+        x -= 2 : 6
+        x *= 2 : 12
+        x /= 4 : 3
+        x %= 2 : 1
+        x is  1
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Comparison Operators</h4>
+    <p>Used to compare values: <br><br>
+        Also this can be <b>Used as a conditional Statements in Logical Decisions.</b></p>
+
+    <pre><code>
+        console.log( 5 == "5" );    // true (values match)
+        console.log( 5 === "5" );   // false (types differ)
+        console.log( 5 != "5" ) ;    // false
+        console.log( 5 !== "5" );   // true
+        console.log( 7 > 5 );       // true
+        console.log( 7 < 5 );       // false
+        console.log( 5 >= 5 );      // true
+        console.log( 4 <= 3 );      // false
+    </code></pre>
+
+    <pre><code>
+        true   // 5 == "5"
+        false  // 5 === "5"
+        false  // 5 != "5"
+        true   // 5 !== "5"
+        true   // 7 > 5 
+        false  // 7 < 5 
+        true   // 5 >= 5 
+        false  // 4 <= 3 
+    </code></pre>
+
+    Example of Logical Decisions by Conditional Statements.
+
+    <pre><code>
+        // The condition is 10 > 5 
+        if(10 > 5){ 
+            console.log("Ten is greater than five");
+        }
+        
+        // The condition is 5 > 10
+        if(5 > 10){
+            console.log("5 is more than 10."); // if condition is True
+        }else{
+            console.log("5 is not more than 10."); // if condition is false
+        }
+    </code></pre>
+
+    <pre><code>
+        Ten is greater than five
+        5 is not more than 10.
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Logical Operators</h4>
+    <p>Used with booleans or conditions:</p>
+
+    <pre><code>
+        console.log(true);     // true
+        console.log(false);     // false
+
+        console.log(true && true); // true (AND)
+        console.log(true && false); // false (AND)
+        console.log(false && false); // false (AND)
+
+        console.log(true || true); // true  (OR)
+        console.log(true || false); // true  (OR)
+        console.log(false || false); // false  (OR)
+
+        console.log(!true);     // false (NOT)
+        console.log(!false);     // true (NOT)
+    </code></pre>
+
+    <pre><code>
+        true
+        false
+
+        true  // true and true = true
+        false // true and false = false
+        false // false and false = false
+
+        true  // true or true = true
+        true  // true or false = true
+        false // false or false = false
+
+        false  // Not true
+        true   // Not false
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Ternary Operator</h4>
+    <p>Shorthand for if...else: <br><br>Used for <b>deciding Statement from condition too quickly.</b></p>
+
+    <pre><code>
+        let age = 20;
+
+        let result = (age >= 18) ? "Adult" : "Minor";
+        console.log(result); // "Adult"
+    </code></pre>
+
+    <pre><code>
+        Adult
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>◈ Bitwise Operators</h4>
+    <p>This Operators are used for Binary operations. <br><br>
+        Let's consider 5 and 1. <br>
+        <b>• 5 = 0101 (4-bit in binary)</b><br>
+        <b>• 1 = 0001</b>
+    </p>
+
+    <PRE><code>
+        console.log(5 & 1);  // 1 (binary AND)
+        console.log(5 | 1);  // 5 (binary OR)
+        console.log(5 ^ 1);  // 4 (XOR)
+        console.log(~5);     // -6 (NOT)
+        console.log(5 << 1); // 10 (shift left)
+        console.log(5 >> 1); // 2  (shift right)
+    </code></PRE>
+
+    <h4> 5 & 1 → Bitwise AND</h4>
+    <p>Rule: Only 1 & 1 gives 1, everything else is 0.</p>
+    <pre><code>
+           0101   (5)
+        &  0001   (1)
+        =  0001   → 1
+    </code></pre>
+    Output
+    <Pre><code>
+        1
+    </code></Pre>
+
+    <h4>5 | 1 → Bitwise OR</h4>
+    <p>Rule: If either bit is 1, result is 1.</p>
+    <pre><code>
+           0101   (5)
+        |  0001   (1)
+        =  0101   → 5
+    </code></pre>
+       Output
+    <Pre><code>
+        5
+    </code></Pre>
+
+    <h4>5 ^ 1 → Bitwise XOR (Exclusive OR)</h4>
+    <p>Rule: Result is 1 only if bits are different.</p>
+    <pre><code>
+           0101   (5)
+        ^  0001   (1)
+        =  0100   → 4
+    </code></pre>
+       Output
+    <Pre><code>
+        4
+    </code></Pre>
+
+    <h4>~5 → Bitwise NOT</h4>
+    <p>Rule: Flips every bit: 1 becomes 0, and 0 becomes 1. <br>
+    <b>For 32-bit integers:</b></p>
+    <pre><code>
+       00000000 00000000 00000000 00000101   (5)
+    ~  11111111 11111111 11111111 11111010   (-6)
+    </code></pre>
+       Output
+    <Pre><code>
+        -6
+    </code></Pre>
+    <b>Why negative?</b> JS uses two's complement system for signed numbers.
+
+    <h4>5 << 1 → Left Shift</h4>
+    <p>Rule: Shifts bits to the left by 1, adds a 0 at the end (×2 each shift).</p>
+    <pre><code>
+           0101   (5)
+        << 1
+         = 1010   → 10
+    </code></pre>
+       Output
+    <Pre><code>
+        10
+    </code></Pre>
+
+    <h4>5 >> 1 → Right Shift</h4>
+    <p>Rule: Shifts bits to the right by 1 (÷2 each shift).</p>
+    <pre><code>
+           0101   (5)
+        >> 1
+         = 0010   → 2
+    </code></pre>
+       Output
+    <Pre><code>
+        2
+    </code></Pre>
+
+    <!------------------------------------------------->
+    <hr>
+
+    <h4>Best Practice:</h4>
+
+    <p>In some case we used <b>+</b> and <b>,</b> in console.log(); or any other way to print output. <br>
+        <b>This can be little mistake if you can't use properly.</b>
+    </p>
+
+    <pre><code>
+        console.log("Sum: " + 5 + 6);
+    </code></pre>
+
+    We think output will be Sum: 11, right? <br>
+    <b>No It will give you wrong answer.</b>
+
+    <pre><code>
+        Sum: 56
+    </code></pre>
+
+    <p><b>Due to JavaScript's automatic type conversion</b>,<br> 
+        <b>It start adding into String because we do Concatinating using +.</b><br>
+        Also we can get many other bugs if we dont take care of it. <br><br>
+        To avoid such this kind of Bugs and Errors. <b>prefer to use , (Semicolon).</b></p>
+
+    <pre><code>
+        console.log("Sum: " , 5 + 6);
+    </code></pre>
+
+    <pre><code>
+        Sum: 11
+    </code></pre>
+
+    <!------------------------------------------------->
+    <hr>
+    
+    &copy; JurneyToJs by Urvish Patel.
+
+</body>
+<script src="script.js"></script>
+
+</html>
