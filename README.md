@@ -1,5 +1,8 @@
 # JourneyToJS
+🔗: https://patelurvish0706.github.io/JourneyToJS/
+
 A beginner-friendly JavaScript learning journey with Base to Core concepts, each explained with a mini project. Every folder covers one concept with simple code, clear explanation, and hands-on practice. Perfect for self-learners, students, and anyone who wants to understand by doing.
+
 
 ## **🔰 Basics**
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/1_Variables/">Variables (var, let, const)</a>

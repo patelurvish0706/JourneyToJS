@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../rsc/icon.avif">
+  <title>Conditional Statements Basics</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <link rel="stylesheet" href="../../rsc/style.css">
+</head>
+
+<body>
+  <div id="navbar">
+    <h2 style="display: flex;align-items: center;gap: 10px;">
+      <img src="../../rsc/icon.avif" alt="My Icon" style="border-radius: 8px;" width=60" height="60">
+      Conditional Statements In JavaScript
+    </h2>
+    <label><a href="https://github.com/patelurvish0706/JourneyToJS">JurneyToJs</a> by Urvish Patel</label>
+
+  </div>
+
+  <P>In Js, Conditional Statements used to <b>make decisions based on condition to lead right output.</b><br>
+    They <b>allow your program to choose different actions based on different conditions.</b><br><br>
+    <b>Without conditional statements, your program would run the same way every time</b> <br> Just like a robot
+    with no thinking.
+  </P>
+  <!------------------------------------------------->
+  <hr>
+
+  <h4>◈ if Statement</h4>
+  <p>Basic check if a condition is true. <br> <br>
+    It is used for <b>Check condition, if it is true then execute sample code.</b> <br>
+    If <b>condition is not match. its simply ingnores.</b></p>
+
+  <pre><code>
+        if (age > 18) {
+          console.log("You can vote");
+        }
+    </code></pre>
+
+  <p>Consider Above snippet, And lets give it an age. <b>(Age = 10),</b></p>
+
+  <pre><code>
+        let age = 20;
+
+        if (age > 18) {
+          console.log("You can vote");
+        }
+    </code></pre>
+  Output,
+  <pre><code>
+        You can vote
+    </code></pre>
+
+  <p>Now lets <b>give age below 18,</b></p>
+  <pre><code>
+        let age = 10;
+
+        if (age > 18) {
+          console.log("You can vote");
+        }
+    </code></pre>
+  <p>Its <b>Does not return anything</b>, simply <b>Ingnores and continue to execute if condition not match.</b></p>
+
+  <!------------------------------------------------->
+  <hr>
+
+  <h4>◈ if...else Statement</h4>
+  <p>Choose between two options. <br><br>
+    This is <b>Same as if Statement</b>. but <b>instead of ingnoring statement</b> at not matching condition.<br>
+    <b>It Execute alternative code defined in else case.</b>
+  </p>
+
+  <p>Let's consider marks above and below then condition and check. it will execute if case or else case.</p>
+  <p>marks = 40</p>
+  <pre><code>
+        let marks = 40;
+
+        if (marks >= 33) {
+          console.log("Pass");
+        } else {
+          console.log("Fail");
+        }
+    </code></pre>
+  <pre><code>
+        Pass
+    </code></pre>
+
+  <p>marks = 30</p>
+  <pre><code>
+        let marks = 30;
+
+        if (marks >= 33) {
+          console.log("Pass");
+        } else {
+          console.log("Fail");
+        }
+    </code></pre>
+  <pre><code>
+        Fail
+    </code></pre>
+
+
+  <!------------------------------------------------->
+  <hr>
+
+
+  <h4>◈ if...elseif...else Statement</h4>
+  <p>Check multiple conditions in order.<br><br>
+    This is <b>Same as if else Statement</b>. But this <b>Allows to check multiple conditions</b>. <br>
+    <b>if first is not match then go to next else if condition</b> to check.
+  </p>
+
+  <p>Let's consider marks again but in Different classification. it will execute and check which case need to execute.
+  </p>
+
+  <pre><code>
+      if (marks >= 90) {
+        console.log("A grade");
+      }
+      else if (marks >= 75) {
+        console.log("B grade");
+      }
+      else if(marks >= 40) {
+        console.log("C grade");
+      }
+      else{
+        console.log("D grade");
+      }
+  </code></pre>
+
+  <p>Lets consider marks = 99</p>
+
+  <pre><code>
+      let marks = 99;
+
+      if (marks >= 90) {
+        console.log("A grade"); // A grade, 99 is greater than 90
+      }
+      else if (marks >= 75) {
+        console.log("B grade");
+      }
+      else if(marks >= 40) {
+        console.log("C grade");
+      }
+      else{
+        console.log("D grade");
+      }
+  </code></pre>
+
+  <pre><code>
+      A grade
+  </code></pre>
+
+  <p>Lets consider marks = 80</p>
+
+  <pre><code>
+      let marks = 80;
+
+      if (marks >= 90) {
+        console.log("A grade");
+      }
+      else if (marks >= 75) {
+        console.log("B grade"); // B grade, 80 is greater than 75
+      }
+      else if(marks >= 40) {
+        console.log("C grade");
+      }
+      else{
+        console.log("D grade");
+      }
+  </code></pre>
+
+  <pre><code>
+      B grade
+  </code></pre>
+
+  <p>Lets consider marks = 55</p>
+
+  <pre><code>
+      let marks = 50;
+
+      if (marks >= 90) {
+        console.log("A grade");
+      }
+      else if (marks >= 75) {
+        console.log("B grade");
+      }
+      else if(marks >= 40) {
+        console.log("C grade"); // C grade, 50 is greater than 40
+      }
+      else{
+        console.log("D grade");
+      }
+  </code></pre>
+
+  <pre><code>
+      C grade
+  </code></pre>
+
+  <p>Lets consider marks lower than 40</p>
+
+  <pre><code>
+      let marks = 30;
+
+      if (marks >= 90) {
+        console.log("A grade");
+      }
+      else if (marks >= 75) {
+        console.log("B grade");
+      }
+      else if(marks >= 40) {
+        console.log("C grade");
+      }
+      else{
+        console.log("D grade"); // D grade, 30 is lower than 40
+      }
+  </code></pre>
+
+  <pre><code>
+      D grade
+  </code></pre>
+
+
+  <p>If not any mensioned condition get true, it execute last else statement</p>
+
+  <!------------------------------------------------->
+  <hr>
+  <h4>◈ Switch Case Statement</h4>
+
+  <p>Best when checking one variable with many values: <br><br>
+    For example we have <b>More than one value to check for it</b>. <br> <br>
+    •&nbsp;&nbsp;by if else each value need to define different condition saperatly. <br>
+    •&nbsp;&nbsp;<b>if else is not so effective with multiple value checking</b> at once. <br>
+    •&nbsp;&nbsp;Also required to use operator to compare with.<br> 
+    •&nbsp;&nbsp;<b>If else compare with each condition.</b><br> </p>
+
+  <pre><code>
+      let day = 2;
+
+      if(day == 1){
+          console.log("Monday"); 
+      }
+      else if(day == 2){
+          console.log("Tuesday"); 
+      }
+      else if(day == 3){
+          console.log("Wednesday"); 
+      }
+      else if(day == 4){
+          console.log("Thursday"); 
+      }
+      else if(day == 5){
+          console.log("Friday"); 
+      }
+      else if(day == 6){
+          console.log("Saturday"); 
+      }
+      else if(day == 7){
+          console.log("Sunday"); 
+      }
+      else{
+          console.log("Invalid"); 
+      }
+  </code></pre>
+    
+  <p>Here <b>Switch Case handle the case</b>. <br> <br>
+  •&nbsp;&nbsp; Best when checking one variable against fixed values. <br>
+  •&nbsp;&nbsp; No complex validation using <, >, == or using any operator <br>
+  •&nbsp;&nbsp; Clean and structured code. <br>
+  •&nbsp;&nbsp; <b>Only check to the existing Case.</b></p>
+
+  <pre><code>
+      let day = 2;
+
+      switch(day) {
+        case "1": 
+          alert("Monday"); 
+          break;
+        case "2": 
+          alert("Tuesday"); 
+          break;
+        case "3": 
+          alert("Wednesday"); 
+          break;
+        case "4": 
+          alert("Thursday"); 
+          break;
+        case "5": 
+          alert("Friday"); 
+          break;
+        case "6": 
+          alert("Saturday"); 
+          break;
+        case "7": 
+          alert("Sunday"); 
+          break;
+        default: 
+          alert("Invalid");
+      }
+  </code><button id="runCode" title="Run Code" onclick="switchCase()">▶</button></pre>
+
+
+  <pre><code>
+      Tuesday
+  </code></pre>
+
+  <!------------------------------------------------->
+  <hr>
+
+  &copy; JurneyToJs by Urvish Patel.
+
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -21,9 +21,15 @@ b {
     align-items: center;
 }
 
+h4{
+    font-size: 18px;
+    color: #000a;
+    text-shadow: 0px 3px 15px #0005;
+}
+
 hr {
     margin: 30px 0 20px;
-    width: 80%;
+    width: 100%;
 }
 
 pre {
