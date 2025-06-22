@@ -39,9 +39,9 @@
 
   <pre><code>
         if (age > 18) {
-          console.log("You can vote");
+          alert("You can vote");
         }
-    </code></pre>
+    </code><button id="runCode" title="Run Code" onclick="ageIfCase()">▶</button></pre>
 
   <p>Consider Above snippet, And lets give it an age. <b>(Age = 10),</b></p>
 
@@ -76,6 +76,13 @@
     <b>It Execute alternative code defined in else case.</b>
   </p>
 
+    <pre><code>
+        if (marks >= 33) {
+          alert("Pass");
+        } else {
+          alert("Fail");
+        }
+    </code><button id="runCode" title="Run Code" onclick="checkIfElseMarks()">▶</button></pre>
   <p>Let's consider marks above and below then condition and check. it will execute if case or else case.</p>
   <p>marks = 40</p>
   <pre><code>
@@ -121,18 +128,18 @@
 
   <pre><code>
       if (marks >= 90) {
-        console.log("A grade");
+        alert("A grade");
       }
       else if (marks >= 75) {
-        console.log("B grade");
+        alert("B grade");
       }
       else if(marks >= 40) {
-        console.log("C grade");
+        alert("C grade");
       }
       else{
-        console.log("D grade");
+        alert("D grade");
       }
-  </code></pre>
+  </code><button id="runCode" title="Run Code" onclick="marksElseif()">▶</button></pre>
 
   <p>Lets consider marks = 99</p>
 
