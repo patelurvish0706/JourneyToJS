@@ -21,9 +21,9 @@ function alertWithLoop() {
 }
 
 // ------- While loop --------
-console.warn("While Loop");
 
 function consoleWhileLoop() {
+    console.warn("While Loop");
     let num = 0;
     while (num < 3) {
         console.log(num);  // 0, 1, 2
