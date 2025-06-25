@@ -9,7 +9,7 @@ A beginner-friendly JavaScript learning journey with Base to Core concepts, each
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/2_Data_Types/">Data Types (String, Number, Boolean, Null, Undefined, Object, Array)</a>
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/3_Operators/">Operators (Arithmetic, Logical, Comparison)</a>
 * <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/4_Conditional_Statements/">Conditional Statements (if, else, switch)</a>
-* Loops (for, while, forEach)
+* <a href="https://patelurvish0706.github.io/JourneyToJS/1_Basics/5_Loops/">Loops (for, while, forEach)</a>
 
 ## **🔧 Functions**
 * Function Declaration & Expression

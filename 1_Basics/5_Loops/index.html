@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../rsc/icon.avif">
+    <title>Loops Basics</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../../rsc/style.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <h2 style="display: flex;align-items: center;gap: 10px;">
+            <img src="../../rsc/icon.avif" alt="My Icon" style="border-radius: 8px;" width=60" height="60">
+            Loops In JavaScript
+        </h2>
+        <label><a href="https://github.com/patelurvish0706/JourneyToJS">JurneyToJs</a> by Urvish Patel</label>
+
+    </div>
+
+    <P>In Js, Some piece of codes are repeatative and need to call frequently. <br><br>
+        We can not write same lines of code multiple times. if we do then its hard to change or debug all together. <br>
+        to avoid this issue, there are many Loops to use in js.</P>
+
+    <p>Loops are <b>repeaters. it repeats the line of code as we need.</b></p>
+
+    <p>Instead of this,</p>
+    <pre><code>
+        console.log("Hello");
+        console.log("Hello");
+        console.log("Hello");
+        console.log("Hello");
+        console.log("Hello");
+     </code></pre>
+
+    <P>We can write it as this,</P>
+    <pre><code>
+        for (let i = 0; i < 5; i++) {
+            console.log("Hello");
+        }
+     </code></pre>
+    <!------------------------------------------------->
+    <hr>
+    <h4>Types of Loops</h4>
+
+    <h4>◈ for Loop</h4>
+    <p>Use when you know how many times to repeat.</p>
+
+    <p>Let's take above example,</p>
+    <pre><code>
+        console.log("Hello");
+        console.log("Hello");
+        console.log("Hello");
+        console.log("Hello");
+        console.log("Hello");
+    </code><button id="runCode" title="Run Code" onclick="alertNoLoop()">▶</button></pre>
+
+    <p>We can write this as,</p>
+    <pre><code>
+        for (let i = 0; i < 5; i++) {
+            console.log("Hello");
+        }
+    </code><button id="runCode" title="Run Code" onclick="alertWithLoop()">▶</button></pre>
+
+    <p>this is most simple way to get repeatative output.</b></p>
+
+    <h4>◈ While loop</h4>
+    <p>Use when: We repeat until something happens . <br>
+        This is conditional loop</p>
+
+    <p>Let's take above example,</p>
+    <pre><code>
+        let num = 0;
+        while (num < 3) {
+          console.log(num);  // 0, 1, 2
+          num++;
+        }
+    </code><button id="runCode" title="Run Code" onclick="consoleWhileLoop()">▶</button></pre>
+
+    <p>We can write this as,</p>
+    <pre><code>
+        for (let i = 0; i < 5; i++) {
+            console.log("Hello");
+        }
+    </code><button id="runCode" title="Run Code" onclick="alertWithLoop()">▶</button></pre>
+
+    <p>this is most simple way to get repeatative output.</b></p>
+
+
+    <!------------------------------------------------->
+    <hr>
+
+    &copy; JurneyToJs by Urvish Patel.
+
+</body>
+<script src="script.js"></script>
+
+</html>
